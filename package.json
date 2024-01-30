@@ -1,0 +1,18 @@
+{
+  "name": "calyptus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^5.7.2",
+    "etherscan-api": "^10.3.0",
+    "fs": "^0.0.1-security",
+    "web3": "^1.10.3"
+  }
+}
