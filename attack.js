@@ -2,7 +2,7 @@ const Web3 = require('web3');
 const ethers = require('ethers');
 const abi = require('./contractABI.json');
 const fs = require('fs');
-const ethapi = require('etherscan-api').init('NF84Z95WF45S8XNHEQHGXJQPUQC2U8929E')
+
 
 // Set your Ethereum node provider
 const web3 = new Web3('https://eth-sepolia.g.alchemy.com/v2/5UbsEn287kpoFAKher3L-X4sFxka8Leu');
@@ -17,7 +17,7 @@ const contractAbi = [abi];
 const targetTimestamp = 1706716944; // Example: February 3, 2022 00:00:00 UTC
 
 // Replace with your private key (for the account that will send the transaction)
-const privateKey = 'dec68c695698c57c05cd2aab7b731f16e091edb104cdb4256d381d251c53a4f3';
+const privateKey = 'a72e5a26f262566b5460e24ac270feeb6e12177759c42c2c4dee2cd7314b36c0';
 
 const wallet = new ethers.Wallet(privateKey, provider);
 // Connect to the wallet using the private key
@@ -37,6 +37,13 @@ async function waitUntilTargetTimestamp() {
         const currentTimestamp = await getCurrentBlockTimestamp();
         if ((targetTimestamp - currentTimestamp) < 20) {
             console.log('Target timestamp reached!');
+            // transporter.sendMail(mailOptions, (error, info) => {
+            //     if (error) {
+            //         console.error('Error sending email:', error);
+            //     } else {
+            //         console.log('Email sent:', info.response);
+            //     }
+            // });
             break;
         }
         console.log(`Current timestamp: ${currentTimestamp}`);

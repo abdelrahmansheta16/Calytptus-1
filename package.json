@@ -13,6 +13,7 @@
     "ethers": "^5.7.2",
     "etherscan-api": "^10.3.0",
     "fs": "^0.0.1-security",
+    "nodemailer": "^6.9.8",
     "web3": "^1.10.3"
   }
 }
